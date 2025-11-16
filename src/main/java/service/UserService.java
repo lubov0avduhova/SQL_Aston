@@ -34,6 +34,12 @@ public class UserService {
         }
     }
 
+    public UserService(UserRepository repository, UserMapper mapper, Validator validator) {
+        this.repository = repository;
+        this.mapper = mapper;
+        this.validator = validator;
+    }
+
     public void createUser(UserRequestDto dto) {
         log.info("Создание нового пользователя");
         try {
