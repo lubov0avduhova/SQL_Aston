@@ -1,6 +1,0 @@
-testcontainers:
-  postgres:
-    image: postgres:16
-    database: testdb
-    username: test
-    password: test

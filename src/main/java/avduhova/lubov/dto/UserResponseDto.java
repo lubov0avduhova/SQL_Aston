@@ -1,6 +1,7 @@
-package dto;
+package avduhova.lubov.dto;
 
 import lombok.Builder;
+
 import java.time.LocalDate;
 
 @Builder

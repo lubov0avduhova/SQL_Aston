@@ -1,4 +1,4 @@
-package dto;
+package avduhova.lubov.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
@@ -18,12 +18,13 @@ public record UserRequestDto(
         @Email(message = "Email должен содержать @")
         String email,
 
-        @NotNull @Min(value = 1, message = "Возраст не должен быть меньше 1 года")
+        @NotNull
+        @Min(value = 1, message = "Возраст не должен быть меньше 1 года")
         @Max(value = 99, message = "Возраст не должен быть больше 99 лет")
         Integer age,
 
         @NotNull(message = "Дата не должна быть пустой")
         @PastOrPresent(message = "Дата не должна быть в будущем")
-        LocalDate created_at
+        LocalDate createdAt
 ) {
 }
