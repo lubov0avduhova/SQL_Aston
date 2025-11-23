@@ -13,11 +13,11 @@ import java.util.Map;
 class UserRepositoryContainer {
 
     @Container
-    protected static final PostgreSQLContainer<?> POSTGRES =
-            new PostgreSQLContainer<>("postgres:16")
-                    .withDatabaseName("testdb")
-                    .withUsername("test")
-                    .withPassword("test");
+    protected static final PostgreSQLContainer<?> POSTGRES = new PostgreSQLContainer<>(
+            TestProperties.getPostgresImage())
+            .withDatabaseName(TestProperties.getDatabaseName())
+            .withUsername(TestProperties.getUsername())
+            .withPassword(TestProperties.getPassword());
 
     protected static EntityManagerFactory emf;
 
