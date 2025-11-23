@@ -3,7 +3,7 @@ version: '3.8'
 services:
   postgres:
     image: postgres:15-alpine
-    container_name: user-service-db
+    container_name: user-avduhova.lubov.service-db
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
